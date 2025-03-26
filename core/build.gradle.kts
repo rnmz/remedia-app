@@ -56,8 +56,12 @@ dependencies {
     implementation(libs.hilt.lib)
     ksp(libs.hilt.compiler)
 
+    api(libs.coil.compose)
+    api(libs.coil.http)
+
     implementation(libs.material)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    debugApi(libs.ui.tooling)
 }
