@@ -1,4 +1,4 @@
-package dev.runo.core.ui.components
+package dev.runo.core_ui.components
 
 import androidx.compose.animation.animateColor
 import androidx.compose.animation.core.LinearEasing
@@ -27,6 +27,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil3.compose.SubcomposeAsyncImage
+
 
 @Composable
 fun TitleCard(
@@ -93,8 +94,7 @@ fun TitleCard(
             modifier = Modifier.fillMaxSize().padding(5.dp),
             maxLines = 2,
             fontSize = 14.sp,
-            overflow = TextOverflow.Ellipsis,
-
+            overflow = TextOverflow.Ellipsis
         )
     }
 }

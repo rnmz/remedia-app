@@ -1,11 +1,10 @@
-package dev.runo.core.di
+package dev.runo.core_ui.di
 
 import dagger.Module
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import dagger.multibindings.Multibinds
-import dev.runo.core.navigation.AppNavGraphBuilder
-
+import dev.runo.core_ui.navigation.AppNavGraphBuilder
 
 @Module
 @InstallIn(SingletonComponent::class)

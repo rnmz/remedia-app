@@ -11,7 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
 import dagger.hilt.android.AndroidEntryPoint
-import dev.runo.core.navigation.NavigationHelper
+import dev.runo.core_ui.navigation.NavigationHelper
 import dev.runo.remedia.ui.theme.ReMediaTheme
 import javax.inject.Inject
 

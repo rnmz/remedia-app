@@ -4,12 +4,12 @@ plugins {
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.ksp)
     alias(libs.plugins.hilt)
-    alias(libs.plugins.serialization)
 }
 
 android {
     namespace = "dev.runo.remedia"
     compileSdk = 35
+    buildFeatures.buildConfig = true
 
     defaultConfig {
         applicationId = "dev.runo.remedia"
@@ -23,11 +23,16 @@ android {
 
     buildTypes {
         release {
+            buildConfigField("String", "API_URL", "\"https://remedia.me/api/\"")
+
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+        }
+        debug {
+            buildConfigField("String", "API_URL", "\"https://remedia.me/api/\"")
         }
     }
     compileOptions {
@@ -44,6 +49,7 @@ android {
 
 dependencies {
     implementation(project(":core"))
+    implementation(project(":core-ui"))
     implementation(project(":home"))
     implementation(project(":reader"))
     implementation(project(":search"))

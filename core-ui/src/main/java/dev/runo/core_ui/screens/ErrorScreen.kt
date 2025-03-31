@@ -1,4 +1,4 @@
-package dev.runo.core.ui.screens
+package dev.runo.core_ui.screens
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -8,8 +8,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 
+// Make it more beautiful.
 @Composable
 fun ErrorScreen(
     reason: String
@@ -18,17 +18,11 @@ fun ErrorScreen(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
-    ) { 
+    ) {
         val emojis = arrayOf("::>_<::", "(；′⌒`)", "ಥ_ಥ")
         Text(
             "${emojis.random()}\n$reason",
             textAlign = TextAlign.Center
         )
     }
-}
-
-@Composable
-@Preview(showBackground = true)
-fun PreviewErrorScreen() {
-    ErrorScreen("123213123123")
 }

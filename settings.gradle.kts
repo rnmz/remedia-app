@@ -20,7 +20,9 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "ReMedia"
-include(":app", ":core")
+include(":app")
+include(":core")
+include(":core-ui")
 include(":home")
 include(":reader")
 include(":search")
