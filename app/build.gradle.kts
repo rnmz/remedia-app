@@ -9,7 +9,6 @@ plugins {
 android {
     namespace = "dev.runo.remedia"
     compileSdk = 35
-    buildFeatures.buildConfig = true
 
     defaultConfig {
         applicationId = "dev.runo.remedia"
@@ -23,16 +22,11 @@ android {
 
     buildTypes {
         release {
-            buildConfigField("String", "API_URL", "\"https://remedia.me/api/\"")
-
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-        }
-        debug {
-            buildConfigField("String", "API_URL", "\"https://remedia.me/api/\"")
         }
     }
     compileOptions {
