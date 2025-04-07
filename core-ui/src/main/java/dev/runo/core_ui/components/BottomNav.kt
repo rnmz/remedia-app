@@ -15,14 +15,14 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import dev.runo.core_ui.R
-import dev.runo.core_ui.navigation.Routes
+import dev.runo.core_ui.navigation.AppRoute
 
 @Composable
 fun BottomNav(navController: NavController) {
     // Need refactor.
     var selectedItem by remember { mutableIntStateOf(0) }
     val icons = listOf(R.drawable.home, R.drawable.search)
-    val routes = listOf(Routes.Home, Routes.Search)
+    val routes = listOf(AppRoute.Home, AppRoute.Search)
 
     NavigationBar(
         modifier = Modifier
