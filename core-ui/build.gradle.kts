@@ -51,9 +51,6 @@ dependencies {
     api(libs.androidx.navigation.compose)
     implementation(libs.kotlinx.serialization)
 
-    api(libs.coil.compose)
-    api(libs.coil.http)
-
     implementation(libs.dagger.lib)
     ksp(libs.dagger.compiler)
     implementation(libs.hilt.lib)
