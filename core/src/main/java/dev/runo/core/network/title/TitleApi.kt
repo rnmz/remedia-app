@@ -50,6 +50,8 @@ interface TitleApi {
 
     /**
      * Get title info by id.
+     * Sometimes this API can return [dev.runo.core.network.error.NetworkErrorList.UNAUTHORIZED] or
+     * [dev.runo.core.network.error.NetworkErrorList.FORBIDDEN] if the title is 18+ or has the status: Moderation.
      * @param id Title id.
      * @return [Response.TitleModel]. List of titles & pagination info. Every list contains 50 items.
      */
