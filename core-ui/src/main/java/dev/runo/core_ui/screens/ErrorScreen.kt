@@ -19,7 +19,7 @@ fun ErrorScreen(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
     ) {
-        val emojis = arrayOf("::>_<::", "(；′⌒`)", "ಥ_ಥ")
+        val emojis = arrayOf("::>_<::", "(；′⌒`)", "ಥ_ಥ", "（＞人＜；）", "(；′⌒`)")
         Text(
             "${emojis.random()}\n$reason",
             textAlign = TextAlign.Center
