@@ -6,7 +6,7 @@ import android.util.Log
 import dev.runo.core_ui.UI_LOG_TAG
 import javax.inject.Inject
 
-class ImageLoader @Inject constructor(private val context: Context) {
+class ImageCache @Inject constructor(private val context: Context) {
 
     private val ramCache = ImageCacheRAM()
     private val diskCache = ImageCacheDisk(context)
