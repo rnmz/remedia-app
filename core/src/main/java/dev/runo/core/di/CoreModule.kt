@@ -9,6 +9,8 @@ import dagger.hilt.components.SingletonComponent
 import dev.runo.core.BuildConfig
 import dev.runo.core.DataStoreManager
 import dev.runo.core.network.AuthInterceptor
+import dev.runo.core.network.news.NewsApi
+import dev.runo.core.network.title.TitleApi
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -44,4 +46,15 @@ class CoreModule {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
+
+    @Provides
+    fun provideNewsApi(retrofit: Retrofit): NewsApi {
+        return retrofit.create<NewsApi>(NewsApi::class.java)
+    }
+
+    @Provides
+    fun provideTitleApi(retrofit: Retrofit): TitleApi {
+        return retrofit.create<TitleApi>(TitleApi::class.java)
+    }
+
 }
