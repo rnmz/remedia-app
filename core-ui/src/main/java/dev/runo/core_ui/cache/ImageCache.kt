@@ -41,4 +41,5 @@ class ImageCache @Inject constructor(private val context: Context) {
         diskCache.saveToDisk(key, bitmap)
         Log.d(UI_LOG_TAG, "[Cache] image $key saved in cache")
     }
+
 }

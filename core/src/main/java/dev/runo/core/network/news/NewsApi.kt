@@ -14,10 +14,7 @@ interface NewsApi {
      */
     @GET("/news/latest")
     @OptionalApiKey
-    suspend fun getLatestNews(
-        @Query("page") page: Int = 1,
-        @Query("elements") elements: Int = 50
-    ): Response<NewsListModel>
+    suspend fun getLatestNews(@Query("page") page: Int = 1): Response<NewsListModel>
 
     /**
      * Fetch news by id.
