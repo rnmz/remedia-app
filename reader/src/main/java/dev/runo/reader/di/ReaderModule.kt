@@ -2,16 +2,34 @@ package dev.runo.reader.di
 
 import dagger.Binds
 import dagger.Module
+import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.scopes.ViewModelScoped
 import dagger.hilt.components.SingletonComponent
 import dagger.multibindings.IntoSet
+import dev.runo.core.network.title.TitleApi
 import dev.runo.core_ui.navigation.AppNavGraphBuilder
+import dev.runo.reader.data.DefaultReaderRepository
+import dev.runo.reader.domain.repository.ReaderRepository
 import dev.runo.reader.ui.navigation.ReaderGraph
 
 @Module
 @InstallIn(SingletonComponent::class)
-abstract class ReaderModule {
+abstract class ReaderBindModule {
+
     @Binds
     @IntoSet
     abstract fun bindReaderGraph(readerGraph: ReaderGraph): AppNavGraphBuilder
+
+}
+
+@Module
+@InstallIn(ViewModelScoped::class)
+class ReaderModule {
+
+    @Provides
+    fun provideReaderRepository(titleApi: TitleApi): ReaderRepository {
+        return DefaultReaderRepository(titleApi)
+    }
+
 }
