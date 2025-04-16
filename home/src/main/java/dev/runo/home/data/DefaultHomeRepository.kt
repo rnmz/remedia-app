@@ -9,8 +9,6 @@ import dev.runo.home.data.map.ConvertTitleModel
 import dev.runo.home.domain.model.News
 import dev.runo.home.domain.model.Title
 import dev.runo.home.domain.repository.HomeRepository
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
 import okio.IOException
 import java.net.SocketTimeoutException
 import javax.inject.Inject
@@ -20,13 +18,6 @@ class DefaultHomeRepository @Inject constructor(
     private val newsApi: NewsApi
 ) : HomeRepository {
 
-    /**
-     * Get top 50 popular titles.
-     *
-     * @return [WorkStatus.Success] with a list of [Title] if the request is successful.
-     * Otherwise, returns [WorkStatus.Error] with one of the following error types:
-     * [NetworkErrorList.UNEXPECTED], [NetworkErrorList.TIMEOUT], [NetworkErrorList.INTERNAL_SERVER], [NetworkErrorList.NO_CONNECTION].
-     */
     override suspend fun getPopularTitles(): WorkStatus<List<Title>> {
         return try {
             val request = titleApi.getPopularTitles(1)
@@ -54,13 +45,6 @@ class DefaultHomeRepository @Inject constructor(
         }
     }
 
-    /**
-     * Latest news.
-     *
-     * @return [WorkStatus.Success] with a list of [News] if the request is successful.
-     * Otherwise, returns [WorkStatus.Error] with one of the following error types:
-     * [NetworkErrorList.UNEXPECTED], [NetworkErrorList.TIMEOUT], [NetworkErrorList.INTERNAL_SERVER], [NetworkErrorList.NO_CONNECTION].
-     */
     override suspend fun getLatestNews(): WorkStatus<List<News>> {
         return try {
             val request = newsApi.getLatestNews(1)

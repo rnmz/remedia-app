@@ -13,6 +13,7 @@ class ImageCache @Inject constructor(private val context: Context) {
 
     /**
      * Get image from cache.
+     *
      * @param key file name
      * @return image as Bitmap
      */
@@ -33,6 +34,7 @@ class ImageCache @Inject constructor(private val context: Context) {
 
     /**
      * Save image in cache
+     *
      * @param key file name
      * @param bitmap image as Bitmap
      */

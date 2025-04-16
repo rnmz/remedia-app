@@ -9,6 +9,7 @@ interface TitleApi {
 
     /**
      * Get popular titles from all time by rating & comments.
+     *
      * @param page Higher page number corresponds to less popular titles.
      * @return [Response.TitleListModel]. List of titles & pagination info. Every list contains 50 items.
      */
@@ -18,6 +19,7 @@ interface TitleApi {
 
     /**
      * Get latest updated titles.
+     *
      * @param page Higher page number corresponds to less popular titles.
      * @return [Response.TitleListModel]. List of titles & pagination info. Every list contains 50 items.
      */
@@ -27,6 +29,7 @@ interface TitleApi {
 
     /**
      * Search title with filters.
+     *
      * @param name Title name. Can be null.
      * @param genres Genres as list. Can be null.
      * @param tags Tags as list. Can be null.
@@ -52,6 +55,7 @@ interface TitleApi {
      * Get title info by id.
      * Sometimes this API can return [dev.runo.core.network.error.NetworkErrorList.UNAUTHORIZED] or
      * [dev.runo.core.network.error.NetworkErrorList.FORBIDDEN] if the title is 18+ or has the status: Moderation.
+     *
      * @param id Title id.
      * @return [Response.TitleModel]. List of titles & pagination info. Every list contains 50 items.
      */
@@ -61,6 +65,9 @@ interface TitleApi {
 
     /**
      * Get chapter images by id.
+     * Sometimes this API can return [dev.runo.core.network.error.NetworkErrorList.FORBIDDEN] or
+     * [dev.runo.core.network.error.NetworkErrorList.UNAUTHORIZED] if the chapter is 18+ or has the status: Moderation.
+     *
      * @param id Chapter id.
      * @return [Response.List.String]. List of pages URLs.
      */

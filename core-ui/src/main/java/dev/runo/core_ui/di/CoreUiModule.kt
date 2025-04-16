@@ -13,8 +13,10 @@ import dev.runo.core_ui.navigation.AppNavGraphBuilder
 @Module
 @InstallIn(SingletonComponent::class)
 abstract class CoreUiBindModule {
+
     @Multibinds
     abstract fun bindNavGraphRoutes(): Set<AppNavGraphBuilder>
+
 }
 
 @Module

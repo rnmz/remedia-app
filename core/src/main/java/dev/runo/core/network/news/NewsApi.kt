@@ -9,6 +9,7 @@ interface NewsApi {
 
     /**
      * Fetch latest news from server.
+     *
      * @param page Higher page number corresponds to older news.
      * @return [Response.NewsListModel]. List of news & pagination info. Every list contains 50 items.
      */
@@ -18,6 +19,7 @@ interface NewsApi {
 
     /**
      * Fetch news by id.
+     *
      * @param id News id.
      * @return [Response.NewsModel].
      */
