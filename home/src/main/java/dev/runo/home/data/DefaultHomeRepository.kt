@@ -32,7 +32,7 @@ class DefaultHomeRepository @Inject constructor(
             val request = titleApi.getPopularTitles(1)
             if (request.isSuccessful) {
                WorkStatus.Success(
-                   withContext(Dispatchers.IO) { request.body()!!.titles.map { ConvertTitleModel.toDomain(it) } }
+                   request.body()!!.titles.map { ConvertTitleModel.toDomain(it) }
                )
             } else {
                 if (request.code() == 500) {
@@ -66,7 +66,7 @@ class DefaultHomeRepository @Inject constructor(
             val request = newsApi.getLatestNews(1)
             if (request.isSuccessful) {
                 WorkStatus.Success(
-                    withContext(Dispatchers.IO) { request.body()!!.news.map { ConvertNewsModel.toDomain(it) } }
+                    request.body()!!.news.map { ConvertNewsModel.toDomain(it) }
                 )
             } else {
                 if (request.code() == 500) {
