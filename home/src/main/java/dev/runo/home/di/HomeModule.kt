@@ -4,7 +4,7 @@ import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.scopes.ViewModelScoped
+import dagger.hilt.android.components.ViewModelComponent
 import dagger.hilt.components.SingletonComponent
 import dagger.multibindings.IntoSet
 import dev.runo.core.network.news.NewsApi
@@ -25,7 +25,7 @@ abstract class HomeBindModule {
 }
 
 @Module
-@InstallIn(ViewModelScoped::class)
+@InstallIn(ViewModelComponent::class)
 class HomeModule {
 
     @Provides
