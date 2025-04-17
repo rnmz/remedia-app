@@ -61,7 +61,7 @@ interface TitleApi {
      */
     @GET("/titles/info")
     @OptionalApiKey
-    suspend fun getTitleInfo(@Query("id") id: Long): Response<TitleModel>
+    suspend fun getTitleInfo(@Query("id") id: Int): Response<TitleModel>
 
     /**
      * Get chapter images by id.
