@@ -26,7 +26,7 @@ interface TitleApi {
      * @param years List of years to filter by. Can be null.
      * @param author Author name. Can be null.
      * @param titleType Title type. Manga, manhwa, etc. Use [TitleType] enum class.
-     * @param orderType Sorting order. `false` - ascending, `true` - descending. By default - ascending.
+     * @param orderType Sorting order. `false` - ascending, `true` - descending.
      * @return [TitleModel]. List of titles & pagination info. Every list contains 50 items.
      */
     @GET("/title/search")
