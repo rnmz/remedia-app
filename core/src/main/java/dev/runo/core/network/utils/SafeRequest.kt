@@ -1,4 +1,4 @@
-package dev.runo.core.network
+package dev.runo.core.network.utils
 
 import dev.runo.core.common.AppError
 import dev.runo.core.network.error.NetworkErrorList

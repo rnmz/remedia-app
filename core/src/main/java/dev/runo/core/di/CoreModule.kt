@@ -9,6 +9,7 @@ import dagger.hilt.components.SingletonComponent
 import dev.runo.core.BuildConfig
 import dev.runo.core.DataStoreManager
 import dev.runo.core.network.AuthInterceptor
+import dev.runo.core.network.FileApi
 import dev.runo.core.network.news.NewsApi
 import dev.runo.core.network.title.TitleApi
 import okhttp3.OkHttpClient
@@ -55,6 +56,11 @@ class CoreModule {
     @Provides
     fun provideTitleApi(retrofit: Retrofit): TitleApi {
         return retrofit.create<TitleApi>(TitleApi::class.java)
+    }
+
+    @Provides
+    fun provideCdnApi(retrofit: Retrofit): FileApi {
+        return retrofit.create<FileApi>(FileApi::class.java)
     }
 
 }
