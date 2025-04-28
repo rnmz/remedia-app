@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="loading">Загружаем тайтлы</string>
+
+    <string name="search_hint">Введите что-нибудь…</string>
+    <string name="order_type">Сортировка по</string>
+    <string name="title_type">Тип тайтла</string>
+    <string name="title_rating">Рейтинг</string>
+    <string name="user_rating">Польз. рейтинг</string>
+    <string name="years">Года</string>
+    <string name="genres_and_tags">Жанры &amp; теги</string>
+
+    <string name="order_ascending">Возрастанию</string>
+    <string name="order_descending">Убыванию</string>
+
+    <string name="title_all">Все</string>
+    <string name="title_manga">Манга</string>
+    <string name="title_manhwa">Манхва</string>
+    <string name="title_manhua">Манхуа</string>
+    <string name="title_comics">Комиксы</string>
+
+    <string name="title_rating_rall">Все</string>
+    <string name="title_rating_r16">R-16</string>
+    <string name="title_rating_r18">R-18</string>
+
+    <string name="status_ongoing">Онгоинг</string>
+    <string name="status_hiatus">Отложено</string>
+    <string name="status_closed">Отменено</string>
+    <string name="status_completed">Завершено</string>
+
+    <string name="year_from">От</string>
+    <string name="year_to">До</string>
+
+    <!-- SFW genres -->
+    <string name="genre_adventures">Авантюристы</string>
+    <string name="genre_antihero">Антигерой</string>
+    <string name="genre_army">Армия</string>
+    <string name="genre_art">Арт</string>
+    <string name="genre_madness">Безумие</string>
+    <string name="genre_immortal">Бессмертие</string>
+    <string name="genre_battles">Битвы</string>
+    <string name="genre_martial_arts">Боевые искусства</string>
+    <string name="genre_power_struggle">Борьба за власть</string>
+    <string name="genre_brother_and_sister">Брат и сестра</string>
+    <string name="genre_vampire">Вампир</string>
+    <string name="genre_witch">Ведьмы</string>
+    <string name="genre_virtual_reality">Виртуальная реальность</string>
+    <string name="genre_survival">Выживание</string>
+    <string name="genre_mc_female">ГГ женщина</string>
+    <string name="genre_mc_male">ГГ мужчина</string>
+    <string name="genre_mc_superpower">ГГ суперсильный</string>
+    <string name="genre_harem">Гарем</string>
+    <string name="genre_heroic_fantasy">Геройское фэнтези</string>
+    <string name="genre_maids">Горничные</string>
+    <string name="genre_cooking">Готовка</string>
+    <string name="genre_gyaru">Гяру</string>
+    <string name="genre_demons">Демоны</string>
+    <string name="genre_detective">Детектив</string>
+    <string name="genre_dragons">Драконы</string>
+    <string name="genre_drama">Драма</string>
+    <string name="genre_ancient_world">Древний мир</string>
+    <string name="genre_spirits_or_ghosts">Духи/Призраки</string>
+    <string name="genre_zombies">Зомби</string>
+    <string name="genre_game">Игра</string>
+    <string name="genre_isekai">Исекай</string>
+    <string name="genre_historical_figures">Исторические личности</string>
+    <string name="genre_history">История</string>
+    <string name="genre_comedy">Комедия</string>
+    <string name="genre_cosmos">Космос</string>
+    <string name="genre_cultivating">Культивация</string>
+    <string name="genre_magic">Магия</string>
+    <string name="genre_galactic_war">Межгалактические войны</string>
+    <string name="genre_revenge">Месть</string>
+    <string name="genre_mecha">Меха</string>
+    <string name="genre_mystic">Мистика</string>
+    <string name="genre_monsters">Монстры</string>
+    <string name="genre_music">Музыка</string>
+    <string name="genre_science_fantastic">Научное фэнтези</string>
+    <string name="genre_ninja">Ниндзя</string>
+    <string name="genre_office_workers">Офисные работники</string>
+    <string name="genre_parody">Пародия</string>
+    <string name="genre_reincarnation">Перерождение</string>
+    <string name="genre_pirates">Пираты</string>
+    <string name="genre_slice_of_life">Повседневность</string>
+    <string name="genre_dungeons">Подземелья</string>
+    <string name="genre_politic">Политика</string>
+    <string name="genre_police">Полиция</string>
+    <string name="genre_half_humans">Полулюди</string>
+    <string name="genre_post_apocalypse">Постапокалипсис</string>
+    <string name="genre_crime">Преступность</string>
+    <string name="genre_psychology">Психология</string>
+    <string name="genre_time_travel">Путешествие во времени</string>
+    <string name="genre_adventure">Путешествия</string>
+    <string name="genre_slave">Раб</string>
+    <string name="genre_power_ranks">Ранги силы</string>
+    <string name="genre_romance">Романтика</string>
+    <string name="genre_rpg">RPG</string>
+    <string name="genre_samurai">Самураи</string>
+    <string name="genre_supernatural">Сверхъестественное</string>
+    <string name="genre_seinen">Сейнен</string>
+    <string name="genre_hidden_personality">Скрытие личности</string>
+    <string name="genre_gender_bender">Смена пола</string>
+    <string name="genre_sport">Спорт</string>
+    <string name="genre_middle_ages">Средневековье</string>
+    <string name="genre_super_power">Суперсила</string>
+    <string name="genre_shoujo">Сёдзе</string>
+    <string name="genre_shounen">Сёнен</string>
+    <string name="genre_tragedy">Трагедия</string>
+    <string name="genre_thriller">Триллер</string>
+    <string name="genre_dumb_mc">Тупой ГГ</string>
+    <string name="genre_horror">Ужасы</string>
+    <string name="genre_smart_mc">Умный ГГ</string>
+    <string name="genre_fantasy">Фэнтези</string>
+    <string name="genre_hikikomori">Хикикомори</string>
+    <string name="genre_school">Школа</string>
+    <string name="genre_evolution">Эволюция</string>
+    <string name="genre_action">Экшен</string>
+    <string name="genre_elf">Эльфы</string>
+    <string name="genre_erotic">Эротика</string>
+    <string name="genre_ecchi">Этти</string>
+    <string name="genre_yuri">Юри</string>
+    <string name="genre_yakuza">Якудза</string>
+
+    <!-- NSFW genres -->
+</resources>
