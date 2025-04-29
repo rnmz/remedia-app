@@ -1,4 +1,4 @@
-package dev.runo.search.ui.screen
+package dev.runo.search.ui
 
 import android.graphics.Bitmap
 

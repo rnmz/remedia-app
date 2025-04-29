@@ -8,8 +8,6 @@ import dev.runo.core.common.WorkStatus
 import dev.runo.core.network.title.toTitleType
 import dev.runo.search.domain.model.Title
 import dev.runo.search.domain.repository.SearchRepository
-import dev.runo.search.ui.screen.TitleUiState
-import dev.runo.search.ui.screen.TitlesListUiState
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.onStart

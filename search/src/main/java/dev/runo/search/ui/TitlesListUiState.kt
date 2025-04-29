@@ -1,4 +1,4 @@
-package dev.runo.search.ui.screen
+package dev.runo.search.ui
 
 data class TitlesListUiState(
     val titles: List<TitleUiState>? = null,
