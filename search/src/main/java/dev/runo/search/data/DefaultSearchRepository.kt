@@ -46,6 +46,7 @@ class DefaultSearchRepository @Inject constructor(
                 WorkStatus.Error(it)
             }
         )
+
         return when (request) {
             is WorkStatus.Success -> {
                 val convertedTitles = request.data.titles.mapNotNull { model ->
@@ -71,6 +72,7 @@ class DefaultSearchRepository @Inject constructor(
                 WorkStatus.Error(it)
             }
         )
+
         return when (request) {
             is WorkStatus.Success -> {
                 val convertedTitles = request.data.titles.mapNotNull { model ->

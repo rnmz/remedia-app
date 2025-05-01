@@ -2,7 +2,7 @@ package dev.runo.home.data
 
 import dev.runo.core.common.WorkStatus
 import dev.runo.core.network.news.NewsApi
-import dev.runo.core.network.safeRequest
+import dev.runo.core.network.utils.safeRequest
 import dev.runo.core.network.title.TitleApi
 import dev.runo.home.data.map.ConvertNewsModel
 import dev.runo.home.data.map.ConvertTitleModel
