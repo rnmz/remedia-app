@@ -5,5 +5,5 @@ import dev.runo.reader.domain.model.Chapter
 
 interface ReaderRepository {
     suspend fun getAllChapters(titleId: Int): WorkStatus<List<Chapter>>
-    suspend fun getImagesByChapterId(chapterId: Int): WorkStatus<List<String>>
+    suspend fun getImagesByChapterId(chapterId: Int): WorkStatus<List<ByteArray>>
 }
