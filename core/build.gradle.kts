@@ -19,16 +19,11 @@ android {
 
     buildTypes {
         release {
-            buildConfigField("String", "API_URL", "\"https://mydomain.com/api\"")
-
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-        }
-        debug {
-            buildConfigField("String", "API_URL", "\"https://remedia.local/api/\"")
         }
     }
     compileOptions {

@@ -8,8 +8,9 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import dev.runo.core.BuildConfig
 import dev.runo.core.DataStoreManager
+import dev.runo.core.common.RELEASE_API_DOMAIN
 import dev.runo.core.network.AuthInterceptor
-import dev.runo.core.network.FileApi
+import dev.runo.core.network.file.FileApi
 import dev.runo.core.network.news.NewsApi
 import dev.runo.core.network.title.TitleApi
 import okhttp3.OkHttpClient
@@ -40,9 +41,8 @@ class CoreModule {
 
     @Provides
     fun provideHttpClient(okHttpClient: OkHttpClient): Retrofit {
-        val url = BuildConfig.API_URL.toString()
         return Retrofit.Builder()
-            .baseUrl(url)
+            .baseUrl(RELEASE_API_DOMAIN)
             .client(okHttpClient)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
