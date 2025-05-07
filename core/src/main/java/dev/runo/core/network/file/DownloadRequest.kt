@@ -1,13 +1,15 @@
-package dev.runo.core.network.utils
+package dev.runo.core.network.file
 
-import dev.runo.core.network.FileApi
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.isActive
+import kotlinx.coroutines.withContext
 import java.io.ByteArrayOutputStream
 
 suspend fun downloadImage(
     fileApi: FileApi,
     fileId: String,
     serverId: Int
-): ByteArray? {
+): ByteArray? = withContext(Dispatchers.IO) {
     val request = fileApi.downloadFileFromCDN("image", serverId, fileId)
     val inputStream = request.body()?.byteStream()
     val outputStream = ByteArrayOutputStream()
@@ -17,9 +19,10 @@ suspend fun downloadImage(
 
     inputStream?.use {
         while (inputStream.read(buffer).also { bytesRead = it } != -1) {
+            if (!coroutineContext.isActive) return@withContext null
             outputStream.write(buffer, 0, bytesRead)
         }
     }
     outputStream.flush()
-    return outputStream.toByteArray()
+    outputStream.toByteArray()
 }
