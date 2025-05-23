@@ -25,7 +25,7 @@ interface NewsApi {
      */
     @GET("news/get")
     @OptionalApiKey
-    suspend fun getNewsById(@Query("id") id: Long): Response<NewsModel>
+    suspend fun getNewsById(@Query("id") id: Int): Response<NewsModel>
 
 }
 

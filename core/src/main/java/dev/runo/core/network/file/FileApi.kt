@@ -1,10 +1,12 @@
 package dev.runo.core.network.file
 
+import dev.runo.core.common.RELEASE_CDN_DOMAIN
 import dev.runo.core.network.annotation.OptionalApiKey
 import okhttp3.ResponseBody
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
+import retrofit2.http.Url
 
 interface FileApi {
 
@@ -20,6 +22,7 @@ interface FileApi {
     @GET("/cdn/download/")
     @OptionalApiKey
     suspend fun downloadFileFromCDN(
+        @Url url: String = RELEASE_CDN_DOMAIN,
         @Query("file_type") type: String,
         @Query("server_id") serverId: Int,
         @Query("file_id") fileId: String
