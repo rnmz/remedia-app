@@ -8,7 +8,7 @@ data class ChapterModel(
     val publishDate: String,
     @SerializedName("book_number")
     val bookNumber: Int,
-    @SerializedName("chapter_id")
+    @SerializedName("chapter_number")
     val chapterNumber: Float,
     val name: String
 )

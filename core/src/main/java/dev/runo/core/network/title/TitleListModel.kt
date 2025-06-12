@@ -4,6 +4,7 @@ import com.google.gson.annotations.SerializedName
 
 
 data class TitleListModel(
+    @SerializedName("items")
     val titles: List<TitleModel>,
     @SerializedName("all_pages")
     val allPages: Int,

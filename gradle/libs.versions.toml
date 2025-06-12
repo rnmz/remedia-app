@@ -1,23 +1,23 @@
 [versions]
-agp = "8.9.1"
-kotlin = "2.1.10"
+agp = "8.9.3"
+kotlin = "2.1.20"
 ksp = "2.1.10-1.0.31"
 
 coreKtx = "1.16.0"
-appcompat = "1.7.0"
-lifecycleRuntimeKtx = "2.8.7"
-lifecycleViewModelKtx = "2.8.7"
+appcompat = "1.7.1"
+lifecycleRuntimeKtx = "2.9.1"
+lifecycleViewModelKtx = "2.9.1"
 activityCompose = "1.10.1"
 hiltCompose = "1.2.0"
-composeBom = "2025.04.00"
-navigation = "2.8.9"
+composeBom = "2025.06.00"
+navigation = "2.9.0"
 serialization = "1.8.0"
 
-datastore = "1.1.4"
+datastore = "1.1.7"
 
 daggerHilt = "2.55"
 
-room = "2.7.0"
+room = "2.7.1"
 
 retrofit = "2.11.0"
 gson = "2.11.0"
@@ -25,6 +25,7 @@ gson = "2.11.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
+material = "1.12.0"
 
 [libraries]
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
@@ -64,6 +65,7 @@ androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
 
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

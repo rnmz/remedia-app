@@ -9,5 +9,6 @@ data class TitleModel(
     val rating: Float,
     @SerializedName("server_id")
     val serverId: Int,
+    val genres: List<String>,
     val chapters: List<ChapterModel>
 )
