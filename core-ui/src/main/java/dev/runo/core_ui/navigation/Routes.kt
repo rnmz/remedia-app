@@ -2,18 +2,25 @@ package dev.runo.core_ui.navigation
 
 import kotlinx.serialization.Serializable
 
-data object AppRoute {
+interface Route
+
+data object BottomNavRoute {
     @Serializable
-    data object Home
+    data object Home : Route
 
     @Serializable
-    data object Search
+    data object Search : Route
 }
 
 data object TitleRoute {
     @Serializable
-    data object Info
+    data class Info(val id: Int) : Route
 
     @Serializable
-    data object Reader
+    data class Reader(val id: Int) : Route
+}
+
+data object NewsRoute : Route {
+    @Serializable
+    data class Open(val id: Int) : Route
 }

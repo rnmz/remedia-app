@@ -10,7 +10,7 @@ import javax.inject.Inject
 class NavigationHelper @Inject constructor(private val routes: Set<@JvmSuppressWildcards AppNavGraphBuilder>) {
     fun createNavGraph(navController: NavController): NavGraph {
         return navController.createGraph(
-            startDestination = AppRoute.Home
+            startDestination = BottomNavRoute.Home
         ) {
             routes.forEach {
                 it.navGraph().invoke(this)
